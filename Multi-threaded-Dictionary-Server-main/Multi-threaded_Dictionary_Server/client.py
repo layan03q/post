@@ -56,8 +56,9 @@ entry_word = tk.Entry(frame, width=30, font=("Arial", 12))
 entry_word.grid(row=0, column=1, padx=5, pady=5)
 entry_word.bind("<Return>", send_word) 
 
+VM_PUBLIC_IP = "158.158.0.65"
 try:
-    client_socket = connect_to_server('127.0.0.1', 8888)
+    client_socket = connect_to_server(VM_PUBLIC_IP, 8888)
 except ConnectionError as e:
     messagebox.showerror("Connection Error", str(e))
     sys.exit()

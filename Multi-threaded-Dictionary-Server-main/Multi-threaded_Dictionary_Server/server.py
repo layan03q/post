@@ -38,7 +38,7 @@ def handle_client(client_socket):
         client_socket.close()
 
 def main():
-    server_host = '127.0.0.1'
+    server_host = '0.0.0.0'
     server_port = 8888
     max_threads = 15  # Maximum number of threads in the thread pool
 
